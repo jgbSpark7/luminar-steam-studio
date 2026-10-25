@@ -1,0 +1,7 @@
+{"app":"luminar-steam-studio","format":1,"project":{
+ "name":"Demo profile","layout_id":"artwork_showcase","art_height":895,
+ "artwork":{"source":"artwork.png","transform":{"center":[305,447.5],"scale":0.4067,"rotation_deg":0,"flip_x":false}},
+ "background":{"source":"background.png","scale":1.0,"offset":[0,0],"dim":0.0,"show_in_editor":true},
+ "avatar":{"source":"avatar.png","zoom":1.2,"offset":[0,-0.3],"circular":false},
+ "export":{"folder":null}
+}}

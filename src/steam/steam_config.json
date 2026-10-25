@@ -1,0 +1,69 @@
+{
+  "schema": 1,
+  "notes": [
+    "Every Steam-specific number Luminar Steam Studio uses lives in this file.",
+    "To override without rebuilding, place a copy named steam_config.json next to the executable (Settings > Create editable copy).",
+    "Units are Steam display pixels (CSS px on the profile page) unless stated otherwise.",
+    "Region x/width values must be whole numbers so exported pieces stay pixel-aligned."
+  ],
+  "file_size_warning_mb": 5.0,
+  "profile": {
+    "viewport_width": 1600,
+    "content_width": 976,
+    "header_top": 56,
+    "header_height": 214,
+    "header_padding": 24,
+    "avatar_size": 166,
+    "body_gap": 16,
+    "left_column_x": 24,
+    "left_column_width": 632,
+    "right_column_width": 268,
+    "column_gap": 28,
+    "showcase_header_height": 34,
+    "showcase_padding": 12,
+    "showcase_spacing": 18,
+    "right_column_height": 780
+  },
+  "avatar": {
+    "export_size": 184
+  },
+  "background": {
+    "reference_width": 1920,
+    "reference_height": 1080
+  },
+  "upload": {
+    "artwork_upload_url": "https://steamcommunity.com/sharedfiles/edititem/767/3/",
+    "profile_url": "https://steamcommunity.com/my/",
+    "showcase_edit_url": "https://steamcommunity.com/my/edit/showcases",
+    "avatar_edit_url": "https://steamcommunity.com/my/edit/avatar",
+    "long_image_snippet": "$J('#image_width').val('1000');$J('#image_height').val('1');",
+    "snippet_note": "Community workaround: without it Steam may shrink tall artwork. Paste it into the browser console (F12) on the upload page after choosing your file and before saving. Steam can change this at any time."
+  },
+  "layouts": [
+    {
+      "id": "artwork_showcase",
+      "name": "Artwork Showcase",
+      "description": "A wide main panel with a narrow strip on the right. The classic split-art profile.",
+      "showcase_title": "Artwork Showcase",
+      "default_height": 800,
+      "min_height": 120,
+      "max_height": 4000,
+      "regions": [
+        { "id": "main", "label": "Main artwork", "file_stem": "MainArtwork", "x": 0, "width": 506 },
+        { "id": "side", "label": "Side artwork", "file_stem": "SideArtwork", "x": 510, "width": 100 }
+      ]
+    },
+    {
+      "id": "featured_artwork",
+      "name": "Featured Artwork Showcase",
+      "description": "One full-width piece. Best for a single wide banner or a tall portrait.",
+      "showcase_title": "Featured Artwork Showcase",
+      "default_height": 620,
+      "min_height": 120,
+      "max_height": 4000,
+      "regions": [
+        { "id": "featured", "label": "Featured artwork", "file_stem": "FeaturedArtwork", "x": 0, "width": 630 }
+      ]
+    }
+  ]
+}

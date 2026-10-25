@@ -1,0 +1,4 @@
+# Bundle Microsoft's C runtime into the .exe so it runs on Windows PCs that don't
+# have the Visual C++ Redistributable installed. Only affects MSVC Windows builds.
+[target.x86_64-pc-windows-msvc]
+rustflags = ["-C", "target-feature=+crt-static"]

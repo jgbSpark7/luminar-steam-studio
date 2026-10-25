@@ -1,0 +1,34 @@
+[package]
+name = "luminar-steam-studio"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.80"
+description = "Design once. Let the tool handle Steam. — a LuminarCore utility"
+build = "build.rs"
+
+[[bin]]
+name = "luminar-steam-studio"
+path = "src/main.rs"
+
+[dependencies]
+eframe = { version = "0.29", features = ["persistence"] }
+image = { version = "0.25", default-features = false, features = ["png", "jpeg", "webp", "gif", "bmp", "tiff", "ico"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rfd = "0.15"
+zip = { version = "2", default-features = false, features = ["deflate"] }
+open = "5"
+
+# Build-time only, and only when building on Windows: embeds the .exe icon and version info.
+[target.'cfg(windows)'.build-dependencies]
+winresource = "0.1"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+strip = true
+
+# Image decoding is painfully slow unoptimised; keep deps fast even in debug.
+[profile.dev.package."*"]
+opt-level = 2
